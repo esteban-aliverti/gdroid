@@ -1,0 +1,5 @@
+Expose Android's Accelerometer values through UDP.
+You can also emulate fixed values for x, y and z acceleration.
+
+* The project is being developed using nbandroid: http://kenai.com/projects/nbandroid/
+* Minimum Android Version: 2.2
