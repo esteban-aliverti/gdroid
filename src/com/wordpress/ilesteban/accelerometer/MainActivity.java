@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
     private TextView txtX;
     private TextView txtY;
     private TextView txtZ;
-    private DecimalFormat twoDForm = new DecimalFormat("#.##");
+    private DecimalFormat twoDForm = new DecimalFormat("#.#####");
     private ToggleButton btnUseSimulator;
     private EditText txtIp;
     private EditText txtPort;
@@ -79,6 +79,10 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
                 }
             }
         });
+        
+        this.txtX.setText(seekValueToG(this.seekX.getProgress())+"");
+        this.txtY.setText(seekValueToG(this.seekY.getProgress())+"");
+        this.txtZ.setText(seekValueToG(this.seekZ.getProgress())+"");
     }
 
     public void onProgressChanged(SeekBar seekBar, int value, boolean arg2) {

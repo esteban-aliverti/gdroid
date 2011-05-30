@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:paddingBottom="20.0dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    
+    <TextView
+    android:text="Server Configuration:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+    
     <LinearLayout
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">   
+    android:layout_height="wrap_content"   
+    android:gravity="center_vertical">   
     
         <EditText
-    android:id="@+id/txtServerIp"
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:text=""
-    android:hint="Enter Server IP "/>
-    
-    <EditText
-    android:id="@+id/txtServerPort"
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:text="1234"/>
-    
+        android:id="@+id/txtServerIp"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text=""
+        android:hint="Enter Server IP "/>
+
+        <EditText
+        android:id="@+id/txtServerPort"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text=""
+        android:hint="Port"/>
+
         <ToggleButton android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,40 +38,55 @@
         android:textOff="Start"/>
     
     </LinearLayout>
+    
+    <TextView
+    android:text="Accelerometer/Simulator:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+    
     <ToggleButton android:id="@+id/btnUseSimulator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textOn="Use Accelerometer"
         android:textOff="Use Simulator"/>
-        
+    
+    <TextView
+    android:text="Values:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+    
     <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
     >   
     
          <!-- X axis -->
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
          >
-          
-            <TextView
-            android:text="X:"
-            android:layout_width="wrap_content"
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            >
+                <TextView
+                android:text="X:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
-            <TextView
-            android:id="@+id/txtX"    
-            android:text="0.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minLines="4"
-            />
-             
+                <TextView
+                android:id="@+id/txtX"    
+                android:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            </LinearLayout> 
             <SeekBar
             android:id="@+id/seekX"
             android:layout_width="match_parent"
@@ -73,25 +98,29 @@
         
         <!-- Y axis -->
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
          >
           
-            <TextView
-            android:text="Y:"
-            android:layout_width="wrap_content"
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            >
+                <TextView
+                android:text="Y:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
-            <TextView
-            android:id="@+id/txtY"    
-            android:text="0.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minLines="4"
-            />
-             
+                <TextView
+                android:id="@+id/txtY"    
+                android:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            </LinearLayout>
             <SeekBar
             android:id="@+id/seekY"
             android:layout_width="match_parent"
@@ -99,30 +128,34 @@
             android:max="600"
             android:progress="300"
             />
+                
         </LinearLayout>
         
         
         <!-- Z axis -->
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
          >
-          
-            <TextView
-            android:text="Z:"
-            android:layout_width="wrap_content"
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            >
+                <TextView
+                android:text="Z:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
-            <TextView
-            android:id="@+id/txtZ"    
-            android:text="0.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minLines="4"
-            />
-             
+                <TextView
+                android:id="@+id/txtZ"    
+                android:text="0.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            </LinearLayout> 
             <SeekBar
             android:id="@+id/seekZ"
             android:layout_width="match_parent"
